@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+              integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+              crossorigin="anonymous" />
+
+        <script src="js/main.js"></script>
+        <title>MiMoneda</title>
+
+        <style>
+            html, body * {
+                box-sizing: border-box;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            body {
+background: linear-gradient( rgb(246 247 249 / 75%), rgb(246 247 249 / 65%)), url(img/fondo_mimoneda.jpg) no-repeat center center fixed;
+    background-size: cover;
+            }
+
+            .container {
+                width: 100%;
+                padding-top: 20px;
+                padding-bottom: 140px;
+            }
+
+            
+           .card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.06);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+           
+        </style>   
+
+
+    </head>
+    <body>
+
+
+        <script>
+
+            if (window.sessionStorage) {
+                var nombre = sessionStorage.getItem("nombre");
+                if (nombre === null)
+                {
+                    window.location.href = 'index.html';
+                }
+            }
+
+
+        </script>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">MiMoneda</a>
+            <div id="user-data-profile">
+                <span class="badge badge-light mr-3" id="user-saldo"></span>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span id="ajustes">Ajustes </span>
+                    </button>
+                    <div class="dropdown-menu" id="main-menu">
+                        <a id="mi-perfil-btn" class="dropdown-item" href="profile.html">Mi perfil</a>
+                        <a id="salir-btn" class="dropdown-item" href="index.html">Salir</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+            <div class="container">
+                <div class="container text-center">
+                    <div class="row" id="listadoplanes">
+                        
+                      
+                        <div class="col-sm-4 align-self-start">
+                            <div class="card" style="width: 80%;">
+                                <img src="img/bitcoin.jpg" class="card-img-top" alt="..." >
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div> 
+                        </div>
+                        
+                        
+   
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+    </body>
+</html>

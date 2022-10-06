@@ -14,16 +14,16 @@ import java.sql.DriverManager;
 public class DBConnection {
             
     Connection connection;
-    static String bd = "inversion2";
-    static String port = "3307";
+    static String bd = "railway";
+    static String port = "6434";
     static String login = "root";
-    static String password = "admin";
+    static String password = "bINOMgM2un5Do7UnksiP";
 
     public DBConnection() {        
         try {     
                         
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url="jdbc:mysql://localhost:" + this.port + "/" + this.bd;
+            String url="jdbc:mysql://containers-us-west-17.railway.app:" + this.port + "/" + this.bd;
             connection = DriverManager.getConnection(url,this.login,this.password);
             System.out.println("conexion establecida");            
         }
